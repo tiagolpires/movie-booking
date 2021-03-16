@@ -5,8 +5,8 @@ module.exports = {
         try {
             const allTheaters = await pool.query('SELECT * FROM sessions')
             res.json(allTheaters.rows)
-        } catch (err) {
-            console.error(err.message)
+        } catch (error) {
+            console.error(error.message)
         }
     },
     async readOne(req, res) {
@@ -14,8 +14,8 @@ module.exports = {
             const {id} = req.params
             const theater = await pool.query('SELECT * FROM sessions WHERE id = $1', [id])
             res.json(theater.rows)
-        } catch (err) {
-            console.error(err.message)
+        } catch (error) {
+            console.error(error.message)
         }
     },
     async create(req, res) {
@@ -27,8 +27,8 @@ module.exports = {
                 [movie, description]
             )
             res.json(newTheater.rows)
-        } catch(err) {
-            console.error(err.message)
+        } catch(error) {
+            console.error(error.message)
         }
     },
     async update(req, res) {
@@ -42,8 +42,8 @@ module.exports = {
                 [movie, description, id]
             )
             res.json('Todo was updated')
-        } catch (err) {
-            console.error(err.message)
+        } catch (error) {
+            console.error(error.message)
         }
     },
     async delete(req, res) {
@@ -51,8 +51,8 @@ module.exports = {
             const {id} = req.params
             await pool.query('DELETE FROM sessions WHERE id = $1', [id])
             res.json('Todo was deleted')
-        } catch (err) {
-            console.error(err.message)
+        } catch (error) {
+            console.error(error.message)
         }
     }
 }
