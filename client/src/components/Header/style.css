@@ -1,0 +1,17 @@
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+header nav a{
+    margin: 0 40px;
+}
+  
+@media(max-width: 767px) {
+    header nav a {
+        margin: 0 20px;
+    }
+}

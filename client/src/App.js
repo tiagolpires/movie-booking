@@ -1,4 +1,5 @@
 import Routes from './Routes'
+import './style.css'
 
 const App = () => {
   return (
