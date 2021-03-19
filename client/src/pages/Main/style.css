@@ -5,6 +5,7 @@ main {
     justify-content: space-between;
     width: 80%;
     margin: auto;
+    max-width: 1800px;
 }
 
 .main-info-container h1{
@@ -12,18 +13,32 @@ main {
 }
 
 .main-info-container a {
-    display: inline-block;
-    background-color: #2EA2E6;
-    border-radius: 10px;
     padding: 10px 50px;
     margin-top: 30px;
-    text-align: center;
 }
 
 main img {
     width: 40vw;
 }
 
+.movies-container {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 100px;
+    max-width: 980px;
+}
+
+@media(min-width: 2000px) {
+    .movies-container {
+        max-width: 1600px;
+    }
+    .main-info-container h1{
+        font-size: 60px;
+    }
+    .main-info-container p {
+        font-size: 25px;
+    }
+}
 @media(max-width: 767px) {
     main {
         flex-direction: column;
@@ -37,6 +52,7 @@ main img {
     }
 
     .main-info-container {
+        text-align: center;
         order: 1;
     } 
 

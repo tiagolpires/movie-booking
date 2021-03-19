@@ -14,19 +14,29 @@
     text-decoration: none;
   }
   
+  h1, h2 {
+    font-weight: 300;
+  }
+
   h1 {
     font-size: 3rem;
-    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   p {
     font-size: 1.1rem;
   }
-  @media(min-width: 2000px) {
-    :root {
-      font-size: 200%;
-    }
+
+  .btn {
+    display: inline-block;
+    background-color: #2EA2E6;
+    text-align: center;
+    border-radius: 10px;
   }
+  
   @media(max-width: 1100px) {
     :root {
       font-size: 73%;
