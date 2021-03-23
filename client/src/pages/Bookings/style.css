@@ -1,0 +1,116 @@
+.bookings-section {
+    width: 80vw;
+    padding-top: 90px;
+    margin: auto;
+}
+
+.bookings-section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bookings-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.booking-ticket {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    background-color: #002B30;
+    border-right: 30px solid #2EA2E6;
+    border-radius: 20px 0 0 20px;
+    margin: 20px 0;
+}
+
+.bookings-container h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 60px;
+}
+
+.ticket-seat {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+ 
+.ticket-division {
+    height: 100%;
+    width: 1px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='white' stroke='%23333' stroke-width='3' stroke-dasharray='10%2c 30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    margin-right: 40px;
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    font-size: 15px;
+}
+
+.booking-info h3{
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+@media(min-width: 2000px) {
+    .bookings-container {
+        max-width: 1400px;
+    }
+
+    .booking-ticket {
+        height: 300px;
+    }
+
+    .bookings-container h2 {
+        font-size: 30px;
+        margin: 0 100px;
+    }
+
+    .booking-info {
+        font-size: 20px
+    }
+
+    .booking-info h3 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .bookings-section {
+        width: 80%;
+    }
+     
+    .booking-ticket {
+        flex-direction: column;
+        padding: 10px 0;
+        border-right: none;
+        border-bottom: 30px solid #2EA2E6;
+        border-radius: 20px 20px 0 0;
+        height: 300px;
+    }
+
+    .ticket-seat {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .ticket-division {
+        height: 1px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .booking-info {
+        align-items: center;
+        text-align: center;
+    }
+}
